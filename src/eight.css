@@ -1,0 +1,23 @@
+/*
+
+  Eightpoint
+  by Wulkano
+
+  ----
+
+  Version: 0.1.0
+  License: MIT
+  Repo: https://github.com/wulkano/eightpoint
+
+  ----
+
+  Eightpoint is a CSS helper library built to help kickstart projects and maintain a nimble / agile environment by providing a modern reset, common components, a grid and baseline system, responsive typography and accessibility basics.
+
+*/
+/*!
+
+Start 8.
+----------------------*/
+@import 'eight.reset';
+@import 'eight.type';
+@import 'eight.grid';

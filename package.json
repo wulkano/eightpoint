@@ -1,0 +1,48 @@
+{
+  "name": "Eightpoint",
+  "version": "0.1.0",
+  "description": "Eightpoint is a CSS helper library built to help start projects quickly and maintain that quick rhythm by providing common components, a grid, readable typography and built in accessibility basics.",
+  "main": "gulpfile.babel.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "6.4.0",
+    "babel-preset-es2015": "6.3.13",
+    "css-mqpacker": "4.0.0",
+    "cssnano": "3.4.0",
+    "del": "2.2.0",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-postcss": "6.2.0",
+    "gulp-rename": "1.2.2",
+    "postcss-conditionals": "2.0.0",
+    "postcss-cssnext": "2.3.0",
+    "postcss-import": "7",
+    "postcss-optional-comments": "1.0.0",
+    "postcss-reporter": "1.3.0",
+    "postcss-simple-vars": "1.2.0",
+    "stylelint": "3.2.1"
+  },
+  "scripts": {
+    "test": "gulp lintStyles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wulkano/eightpoint.git"
+  },
+  "keywords": [
+    "css",
+    "reset",
+    "postcss",
+    "modern",
+    "grid",
+    "helper",
+    "components",
+    "typography",
+    "accessibility"
+  ],
+  "author": "Timothy (@codetheory)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wulkano/eightpoint/issues"
+  },
+  "homepage": "https://github.com/wulkano/eightpoint#readme"
+}

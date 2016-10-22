@@ -1,0 +1,291 @@
+/*
+
+  Eightpoint
+  by Wulkano
+
+  ----
+
+  Version: 0.1.0
+  License: MIT
+  Repo: https://github.com/wulkano/eightpoint
+
+  ----
+
+  Eightpoint is a CSS helper library built to help kickstart projects and maintain a nimble / agile environment by providing a modern reset, common components, a grid and baseline system, responsive typography and accessibility basics.
+
+*/
+/*
+
+  Eight.reset
+  ----
+  Opinionated reset designed for making developing website easier, with accessibility in mind.
+
+*/
+
+/*
+  - Initial resets of mostly all elements
+  ----
+
+  Note: Not all of the elements listed here might not contain the properties listed by default but it's entirely possible for someone to add their own stylesheet to be used on every site so it's a good idea to reset all elements just incase so your pages look exactly how you intended them to be.
+*/
+
+html, body, div,  span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, header, footer, section, article, nav, canvas, aside, figcaption, figure, hgroup, menuitem, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+
+/*
+  - Use `border-box` within the `box-sizing` property to incorporate padding within the width/height of an element.
+  - Set font-size to 16px as a root to ensure all browsers are the same.
+  ----
+
+  `border-box` credit:
+    http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+    https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+
+*/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after { box-sizing: inherit; }
+
+
+
+/*
+  - Set body font to commonly used fallback fonts.
+  - Set body font-size to root font-size to ensure continuity.
+  - Reset line-height
+  - Use common font smoothing rules
+*/
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Oxygen-Sans, "Fira Sans", "Droid Sans", Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+
+
+/*
+  - Remove underline of links by default
+*/
+
+a { text-decoration: none; }
+
+
+
+/*
+  - Remove outline from `:focus` pseudo element
+  ----
+
+  Note: Remember to apply some styling for the focus state of elements that support it, for good user experience and usability. We remove it here because it's common practise to not use the default style.
+*/
+
+:focus { outline: 0; }
+
+
+
+/*
+  - List elements have a reputation of being used, commonly, for uses other than a standard list. For this reason we will remove the list-style from the `ol` and `ul` elements to allow them to be used semantically in code and used as a list when defined by the user. This is a reset after all.
+  - Remove default margins appled to lists and allow that option to be decided by design
+*/
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+}
+
+
+
+/*
+  - Remove quotemarks from the blockquote/q elements by default
+*/
+blockquote, q { quotes: none; }
+
+
+
+/*
+  - Set elements that use monospace fonts to use fonts that work better with common fallbacks
+  - Fix broken handling of monospace fonts in browsers
+  ----
+
+  `broken monospace` credit:
+    http://code.stephenmorley.org/html-and-css/fixing-browsers-broken-monospace-font-handling/
+*/
+
+pre, code, kbd, samp, tt {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+}
+/*
+
+  Eight.typography
+  ----
+
+*/
+
+
+/*
+  Headings
+  ----
+*/
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+h1 {
+  font-size: 48px;
+  font-size: 4.8rem;
+  line-height: 1.333em;
+}
+
+h2 {
+  font-size: 32px;
+  font-size: 3.2rem;
+  line-height: 1.5em;
+}
+
+h3 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.333em;
+}
+
+h4 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+}
+
+h5 {
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1.333em;
+}
+
+/*
+  - If a paragraph is accompanied by another paragraph, we apply a margin to the top of the children after the first child.
+*/
+p + p {
+  margin-top: 1em;
+}
+/*
+
+  Eight.grid
+  ----
+  Based on the 8pt grid. (https://spec.fm/specifics/8-pt-grid)
+
+*/
+
+
+/* Container class for any `.row` or `.col` */
+.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: .8vw;
+  padding-right: .8vw;
+}
+
+/* A wrapper for all columns to offset gutters and provide positioning extras */
+.row {
+  margin-left: -.8vw;
+  margin-right: -.8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%
+}
+.row--center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.row--end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.row--reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.col {
+  width: 12.5%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 12.5%;
+          flex: 1 1 12.5%;
+  padding-right: .8vw;
+  padding-left: .8vw
+}
+
+.col.col-8 {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 12.5%;
+          flex: 0 1 12.5%;
+}
+
+.col.col-7 {
+  width: 87.5%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 87.5%;
+          flex: 0 1 87.5%;
+}
+
+.col.col-6 {
+  width: 75%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 75%;
+          flex: 0 1 75%;
+}
+
+.col.col-5 {
+  width: 62.5%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 62.5%;
+          flex: 0 1 62.5%;
+}
+
+.col.col-4 {
+  width: 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.col.col-3 {
+  width: 37.5%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 37.5%;
+          flex: 0 1 37.5%;
+}
+
+.col.col-2 {
+  width: 25%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+}
+
+.col.col-1 {
+  width: 12.5%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 12.5%;
+          flex: 0 1 12.5%;
+}
