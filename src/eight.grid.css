@@ -12,7 +12,7 @@
   ----
   gutter: width emitting from either side of a column
 */
-$gutter: .8px;
+$gutter: 8px;
 
 
 /* Container class for any `.row` or `.col` */

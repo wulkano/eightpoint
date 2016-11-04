@@ -12,14 +12,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: .8px;
-  padding-right: .8px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 /* A wrapper for all columns to offset gutters and provide positioning extras */
 .row {
-  margin-left: -.8px;
-  margin-right: -.8px;
+  margin-left: -8px;
+  margin-right: -8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,8 +50,8 @@
   -webkit-box-flex: 1;
       -ms-flex: 1 1 12.5%;
           flex: 1 1 12.5%;
-  padding-right: .8px;
-  padding-left: .8px
+  padding-right: 8px;
+  padding-left: 8px
 }
 
 .col.col-8 {
