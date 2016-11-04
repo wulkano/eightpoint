@@ -6,6 +6,14 @@
 
 */
 
+/*
+  Media Queries
+  ----
+  --break-ns: For medium and large screens
+  --break-m : For medium screens
+  --break-l : For large screens
+*/
+
 
 /* Container class for any `.row` or `.col` */
 .grid {
@@ -116,4 +124,360 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 1 12.5%;
           flex: 0 1 12.5%;
+}
+
+
+/*
+  Specific styles for screens bigger than 30em
+*/
+
+@media screen and (min-width: 30em) {
+
+  .ns-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .ns-row {
+    margin-left: -16px;
+    margin-right: -16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%
+  }
+
+  .ns-row--center {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .ns-row--end {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .ns-row--reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+
+  .ns-col {
+    width: 12.5%;
+    max-width: 12.5%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 12.5%;
+            flex: 1 1 12.5%;
+    padding-right: 16px;
+    padding-left: 16px
+  }
+
+  .ns-col.ns-col-8 {
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
+  .ns-col.ns-col-7 {
+    width: 87.5%;
+    max-width: 87.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 87.5%;
+            flex: 0 1 87.5%;
+  }
+
+  .ns-col.ns-col-6 {
+    width: 75%;
+    max-width: 75%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 75%;
+            flex: 0 1 75%;
+  }
+
+  .ns-col.ns-col-5 {
+    width: 62.5%;
+    max-width: 62.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 62.5%;
+            flex: 0 1 62.5%;
+  }
+
+  .ns-col.ns-col-4 {
+    width: 50%;
+    max-width: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+
+  .ns-col.ns-col-3 {
+    width: 37.5%;
+    max-width: 37.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 37.5%;
+            flex: 0 1 37.5%;
+  }
+
+  .ns-col.ns-col-2 {
+    width: 25%;
+    max-width: 25%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 25%;
+            flex: 0 1 25%;
+  }
+
+  .ns-col.ns-col-1 {
+    width: 12.5%;
+    max-width: 12.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 12.5%;
+            flex: 0 1 12.5%;
+  }
+}
+
+/*
+  Specific styles for screens bigger than 30em but smaller than 60em
+*/
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .m-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .m-row {
+    margin-left: -16px;
+    margin-right: -16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%
+  }
+
+  .m-row--center {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .m-row--end {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .m-row--reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+
+  .m-col {
+    width: 12.5%;
+    max-width: 12.5%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 12.5%;
+            flex: 1 1 12.5%;
+    padding-right: 16px;
+    padding-left: 16px
+  }
+
+  .m-col.m-col-8 {
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
+  .m-col.m-col-7 {
+    width: 87.5%;
+    max-width: 87.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 87.5%;
+            flex: 0 1 87.5%;
+  }
+
+  .m-col.m-col-6 {
+    width: 75%;
+    max-width: 75%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 75%;
+            flex: 0 1 75%;
+  }
+
+  .m-col.m-col-5 {
+    width: 62.5%;
+    max-width: 62.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 62.5%;
+            flex: 0 1 62.5%;
+  }
+
+  .m-col.m-col-4 {
+    width: 50%;
+    max-width: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+
+  .m-col.m-col-3 {
+    width: 37.5%;
+    max-width: 37.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 37.5%;
+            flex: 0 1 37.5%;
+  }
+
+  .m-col.m-col-2 {
+    width: 25%;
+    max-width: 25%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 25%;
+            flex: 0 1 25%;
+  }
+
+  .m-col.m-col-1 {
+    width: 12.5%;
+    max-width: 12.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 12.5%;
+            flex: 0 1 12.5%;
+  }
+}
+
+/*
+  Specific styles for screens bigger than 60em
+*/
+
+@media screen and (min-width: 60em) {
+  .l-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .l-row {
+    margin-left: -32px;
+    margin-right: -32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%
+  }
+
+  .l-row--center {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .l-row--end {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .l-row--reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+
+  .l-col {
+    width: 12.5%;
+    max-width: 12.5%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 12.5%;
+            flex: 1 1 12.5%;
+    padding-right: 32px;
+    padding-left: 32px
+  }
+
+  .l-col.l-col-8 {
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
+  .l-col.l-col-7 {
+    width: 87.5%;
+    max-width: 87.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 87.5%;
+            flex: 0 1 87.5%;
+  }
+
+  .l-col.l-col-6 {
+    width: 75%;
+    max-width: 75%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 75%;
+            flex: 0 1 75%;
+  }
+
+  .l-col.l-col-5 {
+    width: 62.5%;
+    max-width: 62.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 62.5%;
+            flex: 0 1 62.5%;
+  }
+
+  .l-col.l-col-4 {
+    width: 50%;
+    max-width: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+
+  .l-col.l-col-3 {
+    width: 37.5%;
+    max-width: 37.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 37.5%;
+            flex: 0 1 37.5%;
+  }
+
+  .l-col.l-col-2 {
+    width: 25%;
+    max-width: 25%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 25%;
+            flex: 0 1 25%;
+  }
+
+  .l-col.l-col-1 {
+    width: 12.5%;
+    max-width: 12.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 12.5%;
+            flex: 0 1 12.5%;
+  }
 }
