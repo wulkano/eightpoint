@@ -1,5 +1,5 @@
 {
-  "name": "Eightpoint",
+  "name": "eightpoint",
   "version": "0.0.1",
   "description": "Eightpoint is a CSS helper library built to help start projects quickly and maintain that quick rhythm by providing common components, a grid, readable typography and built in accessibility basics.",
   "main": "gulpfile.babel.js",
