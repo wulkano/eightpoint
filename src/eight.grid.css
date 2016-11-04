@@ -12,7 +12,7 @@
   ----
   gutter: width emitting from either side of a column
 */
-$gutter: .8vw;
+$gutter: .8px;
 
 
 /* Container class for any `.row` or `.col` */
@@ -36,47 +36,56 @@ $gutter: .8vw;
 
 .col {
   width: calc(100% / 8);
+  max-width: calc(100% / 8);
   flex: 1 1 calc(100% / 8);
   padding-right: $gutter;
   padding-left: $gutter;
 
   &.col-8 {
-    width: calc(100%);
-    flex: 0 1 calc(100% / 8);
+    width: 100%;
+    max-width: 100%;
+    flex: 0 1 100%;
   }
 
   &.col-7 {
     width: calc(100% - (100% / 8));
+    max-width: calc(100% - (100% / 8));
     flex: 0 1 calc(100% - (100% / 8));
   }
 
   &.col-6 {
     width: calc(100% - ((100% / 8) * 2));
+    max-width: calc(100% - ((100% / 8) * 2));
     flex: 0 1 calc(100% - ((100% / 8) * 2));
   }
 
   &.col-5 {
     width: calc(100% - ((100% / 8) * 3));
+    max-width: calc(100% - ((100% / 8) * 3));
     flex: 0 1 calc(100% - ((100% / 8) * 3));
   }
 
   &.col-4 {
     width: calc(100% - ((100% / 8) * 4));
+    max-width: calc(100% - ((100% / 8) * 4));
     flex: 0 1 calc(100% - ((100% / 8) * 4));
   }
 
   &.col-3 {
     width: calc(100% - ((100% / 8) * 5));
+    max-width: calc(100% - ((100% / 8) * 5));
     flex: 0 1 calc(100% - ((100% / 8) * 5));
   }
 
   &.col-2 {
     width: calc(100% - ((100% / 8) * 6));
+    max-width: calc(100% - ((100% / 8) * 6));
     flex: 0 1 calc(100% - ((100% / 8) * 6));
   }
 
   &.col-1 {
     width: calc(100% / 8);
+    max-width: calc(100% / 8);
     flex: 0 1 calc(100% / 8);
   }
 }
