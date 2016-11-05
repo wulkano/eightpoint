@@ -13,20 +13,20 @@
   gutter: width emitting from either side of a column
 */
 $gutter: 8px;
-$ns-gutter: 16px;
-$m-gutter: 16px;
-$l-gutter: 32px;
+$gutter--ns: 16px;
+$gutter--medium: 16px;
+$gutter--large: 32px;
 
 /*
   Media Queries
   ----
   --break-ns: For medium and large screens
-  --break-m : For medium screens
-  --break-l : For large screens
+  --break-medium : For medium screens
+  --break-large : For large screens
 */
 @custom-media --break-ns screen and (min-width: 30em);
-@custom-media --break-m screen and (min-width: 30em) and (max-width: 60em);
-@custom-media --break-l screen and (min-width: 60em);
+@custom-media --break-medium screen and (min-width: 30em) and (max-width: 60em);
+@custom-media --break-large screen and (min-width: 60em);
 
 
 /* Container class for any `.row` or `.col` */
@@ -104,80 +104,69 @@ $l-gutter: 32px;
   }
 }
 
-
-/*
-  Specific styles for screens bigger than 30em
-*/
-
 @media (--break-ns) {
 
-  .ns-grid {
-    display: flex;
-    padding-left: $ns-gutter;
-    padding-right: $ns-gutter;
+  .grid--ns{
+    padding-left: $gutter--ns;
+    padding-right: $gutter--ns;
   }
 
-  .ns-row {
-    margin-left: -$ns-gutter;
-    margin-right: -$ns-gutter;
-    display: flex;
-    flex: 1 0 100%;
+  .row--ns {
+    margin-left: -$gutter--ns;
+    margin-right: -$gutter--ns;
 
     &--center { justify-content: center; }
     &--end { justify-content: flex-end; }
     &--reverse { flex-direction: row-reverse; }
   }
 
-  .ns-col {
-    width: calc(100% / 8);
-    max-width: calc(100% / 8);
-    flex: 1 1 calc(100% / 8);
-    padding-right: $ns-gutter;
-    padding-left: $ns-gutter;
+  .col--ns {
+    padding-right: $gutter--ns;
+    padding-left: $gutter--ns;
 
-    &.ns-col-8 {
+    &.col-8--ns {
       width: 100%;
       max-width: 100%;
       flex: 0 1 100%;
     }
 
-    &.ns-col-7 {
+    &.col-7--ns {
       width: calc(100% - (100% / 8));
       max-width: calc(100% - (100% / 8));
       flex: 0 1 calc(100% - (100% / 8));
     }
 
-    &.ns-col-6 {
+    &.col-6--ns {
       width: calc(100% - ((100% / 8) * 2));
       max-width: calc(100% - ((100% / 8) * 2));
       flex: 0 1 calc(100% - ((100% / 8) * 2));
     }
 
-    &.ns-col-5 {
+    &.col-5--ns {
       width: calc(100% - ((100% / 8) * 3));
       max-width: calc(100% - ((100% / 8) * 3));
       flex: 0 1 calc(100% - ((100% / 8) * 3));
     }
 
-    &.ns-col-4 {
+    &.col-4--ns {
       width: calc(100% - ((100% / 8) * 4));
       max-width: calc(100% - ((100% / 8) * 4));
       flex: 0 1 calc(100% - ((100% / 8) * 4));
     }
 
-    &.ns-col-3 {
+    &.col-3--ns {
       width: calc(100% - ((100% / 8) * 5));
       max-width: calc(100% - ((100% / 8) * 5));
       flex: 0 1 calc(100% - ((100% / 8) * 5));
     }
 
-    &.ns-col-2 {
+    &.col-2--ns {
       width: calc(100% - ((100% / 8) * 6));
       max-width: calc(100% - ((100% / 8) * 6));
       flex: 0 1 calc(100% - ((100% / 8) * 6));
     }
 
-    &.ns-col-1 {
+    &.col-1--ns {
       width: calc(100% / 8);
       max-width: calc(100% / 8);
       flex: 0 1 calc(100% / 8);
@@ -185,78 +174,69 @@ $l-gutter: 32px;
   }
 }
 
-/*
-  Specific styles for screens bigger than 30em but smaller than 60em
-*/
+@media (--break-medium) {
 
-@media (--break-m) {
-  .m-grid {
-    display: flex;
-    padding-left: $m-gutter;
-    padding-right: $m-gutter;
+  .grid--medium{
+    padding-left: $gutter--medium;
+    padding-right: $gutter--medium;
   }
 
-  .m-row {
-    margin-left: -$m-gutter;
-    margin-right: -$m-gutter;
-    display: flex;
-    flex: 1 0 100%;
+  .row--medium {
+    margin-left: -$gutter--medium;
+    margin-right: -$gutter--medium;
 
     &--center { justify-content: center; }
     &--end { justify-content: flex-end; }
     &--reverse { flex-direction: row-reverse; }
   }
 
-  .m-col {
-    width: calc(100% / 8);
-    max-width: calc(100% / 8);
-    flex: 1 1 calc(100% / 8);
-    padding-right: $m-gutter;
-    padding-left: $m-gutter;
+  .col--medium {
+    padding-right: $gutter--medium;
+    padding-left: $gutter--medium;
 
-    &.m-col-8 {
+    &.col-8--medium {
       width: 100%;
       max-width: 100%;
       flex: 0 1 100%;
     }
 
-    &.m-col-7 {
+    &.col-7--medium {
       width: calc(100% - (100% / 8));
       max-width: calc(100% - (100% / 8));
       flex: 0 1 calc(100% - (100% / 8));
     }
 
-    &.m-col-6 {
+    &.col-6--medium {
       width: calc(100% - ((100% / 8) * 2));
       max-width: calc(100% - ((100% / 8) * 2));
       flex: 0 1 calc(100% - ((100% / 8) * 2));
     }
 
-    &.m-col-5 {
+    &.col-5--medium {
       width: calc(100% - ((100% / 8) * 3));
       max-width: calc(100% - ((100% / 8) * 3));
       flex: 0 1 calc(100% - ((100% / 8) * 3));
     }
 
-    &.m-col-4 {
+    &.col-4--medium {
       width: calc(100% - ((100% / 8) * 4));
       max-width: calc(100% - ((100% / 8) * 4));
       flex: 0 1 calc(100% - ((100% / 8) * 4));
     }
 
-    &.m-col-3 {
+    &.col-3--medium {
       width: calc(100% - ((100% / 8) * 5));
       max-width: calc(100% - ((100% / 8) * 5));
       flex: 0 1 calc(100% - ((100% / 8) * 5));
     }
 
-    &.m-col-2 {
+    &.col-2--medium {
       width: calc(100% - ((100% / 8) * 6));
       max-width: calc(100% - ((100% / 8) * 6));
       flex: 0 1 calc(100% - ((100% / 8) * 6));
     }
 
-    &.m-col-1 {
+    &.col-1--medium {
       width: calc(100% / 8);
       max-width: calc(100% / 8);
       flex: 0 1 calc(100% / 8);
@@ -264,78 +244,69 @@ $l-gutter: 32px;
   }
 }
 
-/*
-  Specific styles for screens bigger than 60em
-*/
+@media (--break-large) {
 
-@media (--break-l) {
-  .l-grid {
-    display: flex;
-    padding-left: $l-gutter;
-    padding-right: $l-gutter;
+  .grid--large{
+    padding-left: $gutter--large;
+    padding-right: $gutter--large;
   }
 
-  .l-row {
-    margin-left: -$l-gutter;
-    margin-right: -$l-gutter;
-    display: flex;
-    flex: 1 0 100%;
+  .row--large {
+    margin-left: -$gutter--large;
+    margin-right: -$gutter--large;
 
     &--center { justify-content: center; }
     &--end { justify-content: flex-end; }
     &--reverse { flex-direction: row-reverse; }
   }
 
-  .l-col {
-    width: calc(100% / 8);
-    max-width: calc(100% / 8);
-    flex: 1 1 calc(100% / 8);
-    padding-right: $l-gutter;
-    padding-left: $l-gutter;
+  .col--large {
+    padding-right: $gutter--large;
+    padding-left: $gutter--large;
 
-    &.l-col-8 {
+    &.col-8--large {
       width: 100%;
       max-width: 100%;
       flex: 0 1 100%;
     }
 
-    &.l-col-7 {
+    &.col-7--large {
       width: calc(100% - (100% / 8));
       max-width: calc(100% - (100% / 8));
       flex: 0 1 calc(100% - (100% / 8));
     }
 
-    &.l-col-6 {
+    &.col-6--large {
       width: calc(100% - ((100% / 8) * 2));
       max-width: calc(100% - ((100% / 8) * 2));
       flex: 0 1 calc(100% - ((100% / 8) * 2));
     }
 
-    &.l-col-5 {
+    &.col-5--large {
       width: calc(100% - ((100% / 8) * 3));
       max-width: calc(100% - ((100% / 8) * 3));
       flex: 0 1 calc(100% - ((100% / 8) * 3));
     }
 
-    &.l-col-4 {
+    &.col-4--large {
       width: calc(100% - ((100% / 8) * 4));
       max-width: calc(100% - ((100% / 8) * 4));
       flex: 0 1 calc(100% - ((100% / 8) * 4));
     }
 
-    &.l-col-3 {
+    &.col-3--large {
       width: calc(100% - ((100% / 8) * 5));
       max-width: calc(100% - ((100% / 8) * 5));
       flex: 0 1 calc(100% - ((100% / 8) * 5));
     }
 
-    &.l-col-2 {
+    &.col-2--large {
       width: calc(100% - ((100% / 8) * 6));
       max-width: calc(100% - ((100% / 8) * 6));
       flex: 0 1 calc(100% - ((100% / 8) * 6));
     }
 
-    &.l-col-1 {
+    &.col-1--large {
       width: calc(100% / 8);
       max-width: calc(100% / 8);
       flex: 0 1 calc(100% / 8);
