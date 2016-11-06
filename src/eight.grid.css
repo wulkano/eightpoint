@@ -34,6 +34,21 @@ $gutter--large: 32px;
   display: flex;
   padding-left: $gutter;
   padding-right: $gutter;
+
+  @media (--break-ns) {
+    padding-left: $gutter--ns;
+    padding-right: $gutter--ns;
+  }
+
+  @media (--break-medium) {
+    padding-left: $gutter--ns;
+    padding-right: $gutter--ns;
+  }
+
+  @media (--break-large) {
+    padding-left: $gutter--large;
+    padding-right: $gutter--large;
+  }
 }
 
 /* A wrapper for all columns to offset gutters and provide positioning extras */
@@ -42,6 +57,21 @@ $gutter--large: 32px;
   margin-right: -$gutter;
   display: flex;
   flex: 1 0 100%;
+
+  @media (--break-ns) {
+    margin-left: -$gutter--ns;
+    margin-right: -$gutter--ns;
+  }
+
+  @media (--break-medium) {
+    margin-left: -$gutter--medium;
+    margin-right: -$gutter--medium;
+  }
+
+  @media (--break-large) {
+    margin-left: -$gutter--large;
+    margin-right: -$gutter--large;
+  }
 
   &--center { justify-content: center; }
   &--end { justify-content: flex-end; }
@@ -105,22 +135,10 @@ $gutter--large: 32px;
 }
 
 @media (--break-ns) {
-
-  .grid--ns{
-    padding-left: $gutter--ns;
-    padding-right: $gutter--ns;
-  }
-
-  .row--ns {
-    margin-left: -$gutter--ns;
-    margin-right: -$gutter--ns;
-
-    &--center { justify-content: center; }
-    &--end { justify-content: flex-end; }
-    &--reverse { flex-direction: row-reverse; }
-  }
-
   .col--ns {
+    width: calc(100% / 8);
+    max-width: calc(100% / 8);
+    flex: 1 1 calc(100% / 8);
     padding-right: $gutter--ns;
     padding-left: $gutter--ns;
 
@@ -175,22 +193,10 @@ $gutter--large: 32px;
 }
 
 @media (--break-medium) {
-
-  .grid--medium{
-    padding-left: $gutter--medium;
-    padding-right: $gutter--medium;
-  }
-
-  .row--medium {
-    margin-left: -$gutter--medium;
-    margin-right: -$gutter--medium;
-
-    &--center { justify-content: center; }
-    &--end { justify-content: flex-end; }
-    &--reverse { flex-direction: row-reverse; }
-  }
-
   .col--medium {
+    width: calc(100% / 8);
+    max-width: calc(100% / 8);
+    flex: 1 1 calc(100% / 8);
     padding-right: $gutter--medium;
     padding-left: $gutter--medium;
 
@@ -245,22 +251,10 @@ $gutter--large: 32px;
 }
 
 @media (--break-large) {
-
-  .grid--large{
-    padding-left: $gutter--large;
-    padding-right: $gutter--large;
-  }
-
-  .row--large {
-    margin-left: -$gutter--large;
-    margin-right: -$gutter--large;
-
-    &--center { justify-content: center; }
-    &--end { justify-content: flex-end; }
-    &--reverse { flex-direction: row-reverse; }
-  }
-
   .col--large {
+    width: calc(100% / 8);
+    max-width: calc(100% / 8);
+    flex: 1 1 calc(100% / 8);
     padding-right: $gutter--large;
     padding-left: $gutter--large;
 

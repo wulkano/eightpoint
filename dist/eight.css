@@ -204,6 +204,27 @@ p + p {
   padding-left: 8px;
   padding-right: 8px;
 }
+@media screen and (min-width: 30em) {
+
+  .grid {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media screen and (min-width: 30em) and (max-width: 60em) {
+
+  .grid {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media screen and (min-width: 60em) {
+
+  .grid {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
 
 /* A wrapper for all columns to offset gutters and provide positioning extras */
 .row {
@@ -214,7 +235,28 @@ p + p {
   display: flex;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 100%;
-          flex: 1 0 100%
+          flex: 1 0 100%;
+}
+@media screen and (min-width: 30em) {
+
+  .row {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+}
+@media screen and (min-width: 30em) and (max-width: 60em) {
+
+  .row {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+}
+@media screen and (min-width: 60em) {
+
+  .row {
+    margin-left: -32px;
+    margin-right: -32px;
+  }
 }
 .row--center {
   -webkit-box-pack: center;
@@ -240,7 +282,7 @@ p + p {
       -ms-flex: 1 1 12.5%;
           flex: 1 1 12.5%;
   padding-right: 8px;
-  padding-left: 8px
+  padding-left: 8px;
 }
 
 .col.col-8 {
@@ -308,41 +350,15 @@ p + p {
 }
 
 @media screen and (min-width: 30em) {
-
-  .grid--ns{
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .row--ns {
-    margin-left: -16px;
-    margin-right: -16px
-  }
-
-  .row--ns--center {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .row--ns--end {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-
-  .row--ns--reverse {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-
   .col--ns {
+    width: 12.5%;
+    max-width: 12.5%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 12.5%;
+            flex: 1 1 12.5%;
     padding-right: 16px;
-    padding-left: 16px
+    padding-left: 16px;
   }
-
   .col--ns.col-8--ns {
     width: 100%;
     max-width: 100%;
@@ -350,7 +366,6 @@ p + p {
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
   }
-
   .col--ns.col-7--ns {
     width: 87.5%;
     max-width: 87.5%;
@@ -358,7 +373,6 @@ p + p {
         -ms-flex: 0 1 87.5%;
             flex: 0 1 87.5%;
   }
-
   .col--ns.col-6--ns {
     width: 75%;
     max-width: 75%;
@@ -366,7 +380,6 @@ p + p {
         -ms-flex: 0 1 75%;
             flex: 0 1 75%;
   }
-
   .col--ns.col-5--ns {
     width: 62.5%;
     max-width: 62.5%;
@@ -374,7 +387,6 @@ p + p {
         -ms-flex: 0 1 62.5%;
             flex: 0 1 62.5%;
   }
-
   .col--ns.col-4--ns {
     width: 50%;
     max-width: 50%;
@@ -382,7 +394,6 @@ p + p {
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
   }
-
   .col--ns.col-3--ns {
     width: 37.5%;
     max-width: 37.5%;
@@ -390,7 +401,6 @@ p + p {
         -ms-flex: 0 1 37.5%;
             flex: 0 1 37.5%;
   }
-
   .col--ns.col-2--ns {
     width: 25%;
     max-width: 25%;
@@ -398,7 +408,6 @@ p + p {
         -ms-flex: 0 1 25%;
             flex: 0 1 25%;
   }
-
   .col--ns.col-1--ns {
     width: 12.5%;
     max-width: 12.5%;
@@ -409,41 +418,15 @@ p + p {
 }
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
-
-  .grid--medium{
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .row--medium {
-    margin-left: -16px;
-    margin-right: -16px
-  }
-
-  .row--medium--center {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .row--medium--end {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-
-  .row--medium--reverse {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-
   .col--medium {
+    width: 12.5%;
+    max-width: 12.5%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 12.5%;
+            flex: 1 1 12.5%;
     padding-right: 16px;
-    padding-left: 16px
+    padding-left: 16px;
   }
-
   .col--medium.col-8--medium {
     width: 100%;
     max-width: 100%;
@@ -451,7 +434,6 @@ p + p {
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
   }
-
   .col--medium.col-7--medium {
     width: 87.5%;
     max-width: 87.5%;
@@ -459,7 +441,6 @@ p + p {
         -ms-flex: 0 1 87.5%;
             flex: 0 1 87.5%;
   }
-
   .col--medium.col-6--medium {
     width: 75%;
     max-width: 75%;
@@ -467,7 +448,6 @@ p + p {
         -ms-flex: 0 1 75%;
             flex: 0 1 75%;
   }
-
   .col--medium.col-5--medium {
     width: 62.5%;
     max-width: 62.5%;
@@ -475,7 +455,6 @@ p + p {
         -ms-flex: 0 1 62.5%;
             flex: 0 1 62.5%;
   }
-
   .col--medium.col-4--medium {
     width: 50%;
     max-width: 50%;
@@ -483,7 +462,6 @@ p + p {
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
   }
-
   .col--medium.col-3--medium {
     width: 37.5%;
     max-width: 37.5%;
@@ -491,7 +469,6 @@ p + p {
         -ms-flex: 0 1 37.5%;
             flex: 0 1 37.5%;
   }
-
   .col--medium.col-2--medium {
     width: 25%;
     max-width: 25%;
@@ -499,7 +476,6 @@ p + p {
         -ms-flex: 0 1 25%;
             flex: 0 1 25%;
   }
-
   .col--medium.col-1--medium {
     width: 12.5%;
     max-width: 12.5%;
@@ -510,41 +486,15 @@ p + p {
 }
 
 @media screen and (min-width: 60em) {
-
-  .grid--large{
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  .row--large {
-    margin-left: -32px;
-    margin-right: -32px
-  }
-
-  .row--large--center {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .row--large--end {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-
-  .row--large--reverse {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-
   .col--large {
+    width: 12.5%;
+    max-width: 12.5%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 12.5%;
+            flex: 1 1 12.5%;
     padding-right: 32px;
-    padding-left: 32px
+    padding-left: 32px;
   }
-
   .col--large.col-8--large {
     width: 100%;
     max-width: 100%;
@@ -552,7 +502,6 @@ p + p {
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
   }
-
   .col--large.col-7--large {
     width: 87.5%;
     max-width: 87.5%;
@@ -560,7 +509,6 @@ p + p {
         -ms-flex: 0 1 87.5%;
             flex: 0 1 87.5%;
   }
-
   .col--large.col-6--large {
     width: 75%;
     max-width: 75%;
@@ -568,7 +516,6 @@ p + p {
         -ms-flex: 0 1 75%;
             flex: 0 1 75%;
   }
-
   .col--large.col-5--large {
     width: 62.5%;
     max-width: 62.5%;
@@ -576,7 +523,6 @@ p + p {
         -ms-flex: 0 1 62.5%;
             flex: 0 1 62.5%;
   }
-
   .col--large.col-4--large {
     width: 50%;
     max-width: 50%;
@@ -584,7 +530,6 @@ p + p {
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
   }
-
   .col--large.col-3--large {
     width: 37.5%;
     max-width: 37.5%;
@@ -592,7 +537,6 @@ p + p {
         -ms-flex: 0 1 37.5%;
             flex: 0 1 37.5%;
   }
-
   .col--large.col-2--large {
     width: 25%;
     max-width: 25%;
@@ -600,7 +544,6 @@ p + p {
         -ms-flex: 0 1 25%;
             flex: 0 1 25%;
   }
-
   .col--large.col-1--large {
     width: 12.5%;
     max-width: 12.5%;
