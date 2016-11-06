@@ -23,24 +23,6 @@
   padding-left: 8px;
   padding-right: 8px;
 }
-@media screen and (min-width: 30em) {
-  .grid {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-@media screen and (min-width: 30em) and (max-width: 60em) {
-  .grid {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-@media screen and (min-width: 60em) {
-  .grid {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
 
 /* A wrapper for all columns to offset gutters and provide positioning extras */
 .row {
@@ -52,24 +34,6 @@
   -webkit-box-flex: 1;
       -ms-flex: 1 0 100%;
           flex: 1 0 100%;
-}
-@media screen and (min-width: 30em) {
-  .row {
-    margin-left: -16px;
-    margin-right: -16px;
-  }
-}
-@media screen and (min-width: 30em) and (max-width: 60em) {
-  .row {
-    margin-left: -16px;
-    margin-right: -16px;
-  }
-}
-@media screen and (min-width: 60em) {
-  .row {
-    margin-left: -32px;
-    margin-right: -32px;
-  }
 }
 .row--center {
   -webkit-box-pack: center;
@@ -163,6 +127,14 @@
 }
 
 @media screen and (min-width: 30em) {
+  .grid {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .row {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
   .col--ns {
     width: 12.5%;
     max-width: 12.5%;
@@ -231,6 +203,14 @@
 }
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
+  .grid {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .row {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
   .col--medium {
     width: 12.5%;
     max-width: 12.5%;
@@ -299,6 +279,14 @@
 }
 
 @media screen and (min-width: 60em) {
+  .grid {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .row {
+    margin-left: -32px;
+    margin-right: -32px;
+  }
   .col--large {
     width: 12.5%;
     max-width: 12.5%;

@@ -11,6 +11,7 @@ import rename from 'gulp-rename';
 import comments from 'postcss-optional-comments';
 import conditionals from 'postcss-conditionals';
 import atImport from 'postcss-import';
+import mqpacker from 'css-mqpacker';
 
 // Directories
 const SRC_DIR = 'src';
@@ -42,6 +43,7 @@ export const css = () => src([CSS_GLOB, CSS_PARTIALS], { base: SRC_DIR })
       simpleVars,
       conditionals,
       nested,
+      mqpacker,
       cssnext
     ]))
     .pipe(dest(BUILD_DIR))
