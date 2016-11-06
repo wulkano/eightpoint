@@ -80,7 +80,6 @@ $gutter--large: 32px;
 
 .col {
   width: calc(100% / 8);
-  max-width: calc(100% / 8);
   flex: 1 1 calc(100% / 8);
   padding-right: $gutter;
   padding-left: $gutter;
@@ -137,7 +136,6 @@ $gutter--large: 32px;
 @media (--break-ns) {
   .col--ns {
     width: calc(100% / 8);
-    max-width: calc(100% / 8);
     flex: 1 1 calc(100% / 8);
     padding-right: $gutter--ns;
     padding-left: $gutter--ns;
@@ -195,7 +193,6 @@ $gutter--large: 32px;
 @media (--break-medium) {
   .col--medium {
     width: calc(100% / 8);
-    max-width: calc(100% / 8);
     flex: 1 1 calc(100% / 8);
     padding-right: $gutter--medium;
     padding-left: $gutter--medium;
@@ -253,7 +250,6 @@ $gutter--large: 32px;
 @media (--break-large) {
   .col--large {
     width: calc(100% / 8);
-    max-width: calc(100% / 8);
     flex: 1 1 calc(100% / 8);
     padding-right: $gutter--large;
     padding-left: $gutter--large;
