@@ -308,14 +308,23 @@ p + p {
 
 @media screen and (min-width: 30em) {
 
-  .grid {
+  .grid--ns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding-left: 16px;
     padding-right: 16px;
   }
 
-  .row {
+  .row--ns {
     margin-left: -16px;
     margin-right: -16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
   }
 
   .col--ns {
@@ -394,14 +403,23 @@ p + p {
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
 
-  .grid {
+  .grid--medium {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding-left: 16px;
     padding-right: 16px;
   }
 
-  .row {
+  .row--medium {
     margin-left: -16px;
     margin-right: -16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
   }
 
   .col--medium {
@@ -480,14 +498,23 @@ p + p {
 
 @media screen and (min-width: 60em) {
 
-  .grid {
+  .grid--large {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding-left: 32px;
     padding-right: 32px;
   }
 
-  .row {
+  .row--large {
     margin-left: -32px;
     margin-right: -32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
   }
 
   .col--large {
