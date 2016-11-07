@@ -5,11 +5,36 @@
 
 */
 
+/*! Constants */
+$locales: (
+  'af': '\201E' '\201D' '\201A' '\2019',
+  'bg': '\201E' '\201C' '\201A' '\2018',
+  'cs': '\201E' '\201C' '\201A' '\2018',
+  'da': '\00BB' '\00AB' '\203A' '\2039',
+  'de': '\201E' '\201C' '\201A' '\2018',
+  'el': '\00AB' '\00BB' '\2039' '\203A',
+  'en': '\2018' '\2019' '\201C' '\201D',
+  'es': '\00AB' '\00BB' '\2039' '\203A',
+  'fi': '\201D' '\201D' '\2019' '\2019',
+  'fr': '\ab\2005' '\2005\bb' '\2039\2005' '\2005\203a',
+  'hr': '\00BB' '\00AB' '\203A' '\2039',
+  'is': '\201E' '\201C' '\201A' '\2018',
+  'lt': '\201E' '\201C' '\201A' '\2018',
+  'nl': '\201E' '\201D' '\201A' '\2019',
+  'pl': '\201E' '\201D' '\201A' '\2019',
+  'ro': '\201E' '\201C' '\201A' '\2018',
+  'sk': '\201E' '\201C' '\201A' '\2018',
+  'sq': '\00AB' '\00BB' '\2039' '\203A',
+  'sr': '\201E' '\201C' '\201A' '\2018',
+  'sv': '\201D' '\201D' '\2019' '\2019',
+  'tr': '\00AB' '\00BB' '\2039' '\203A'
+);
+
 /*! Configurables
 
 Rule: Add margin to paragraphs with sibling paragraphs */
 $paragraph-sibling-margin: true;
-
+$quote-locale: en;
 
 /*
   Headings
@@ -49,4 +74,11 @@ h5 {
   p + p {
     margin-top: 1em;
   }
+}
+
+/*
+  - Configures the document to use the correct quotes for the locale assigned to <html lang>
+*/
+html:lang($quote-locale) {
+  quotes: map-get($locales, $quote-locale);
 }
