@@ -5,7 +5,6 @@
 
 */
 
-
 /*
   Headings
   ----
@@ -46,3 +45,10 @@ h5 {
   - If a paragraph is accompanied by another paragraph, we apply a margin to the top of the children after the first child.
 */
 p + p { margin-top: 1em; }
+
+/*
+  - Assign locale-specific quotations to the current document.
+*/
+html:lang(en) {
+  quotes: '\2018' '\2019' '\201C' '\201D';
+}
