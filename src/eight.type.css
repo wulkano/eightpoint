@@ -10,6 +10,8 @@
 Rule: Add margin to paragraphs with sibling paragraphs */
 $paragraph-sibling-margin: true;
 
+/*! Locales: af,bg,cs,da,de,el,en,es,fi,fr,hr,is,lt,nl,pl,ro,sk,sq,sr,sv,tr */
+$quotes-locale: en;
 
 /*
   Headings
@@ -49,4 +51,11 @@ h5 {
   p + p {
     margin-top: 1em;
   }
+}
+
+/*
+  - Assign locale-specific quotations to the current document.
+*/
+html:lang($quotes-locale) {
+  quotes: map(quote_locales, $quotes-locale);
 }
