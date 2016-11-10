@@ -25,7 +25,7 @@
   display: flex;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 100%;
-          flex: 1 0 100%
+          flex: 1 0 100%;
 }
 .row--center {
   -webkit-box-pack: center;
@@ -51,7 +51,7 @@
       -ms-flex: 1 1 12.5%;
           flex: 1 1 12.5%;
   padding-right: 8px;
-  padding-left: 8px
+  padding-left: 8px;
 }
 
 .col.col-8 {
