@@ -4,13 +4,14 @@ import postcss from 'gulp-postcss';
 import stylelint from 'stylelint';
 import reporter from 'postcss-reporter';
 import cssnext from 'postcss-cssnext';
-import mqpacker from 'css-mqpacker';
+import nested from 'postcss-nested';
 import minify from 'cssnano';
 import simpleVars from 'postcss-simple-vars';
 import rename from 'gulp-rename';
 import comments from 'postcss-optional-comments';
 import conditionals from 'postcss-conditionals';
 import atImport from 'postcss-import';
+import mqpacker from 'css-mqpacker';
 import map from 'postcss-map';
 
 
@@ -45,6 +46,8 @@ export const css = () => src([CSS_GLOB, CSS_PARTIALS], { base: SRC_DIR })
       comments,
       simpleVars,
       conditionals,
+      nested,
+      mqpacker,
       cssnext,
       map({
         maps: [`${JSON_CONF}`]
